@@ -74,7 +74,7 @@ public class BlockPicFrame extends BlockContainer implements IGuiCreator
       return false;
    }
 
-   // Babar ==> ÓÚÍ˚ÚËÂ ËÌÚÂÙÂÈÒ‡
+   // Babar ==> –û—Ç–∫—Ä—ã—Ç–∏–µ –∏–Ω—Ç–µ—Ä—Ñ–µ–π—Å–∞ —Ç–∞–±–ª–∏—á–∫–∏
    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float offX, float offY, float offZ) 
    {
       if (player.isSneaking()) 
