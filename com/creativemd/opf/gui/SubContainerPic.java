@@ -19,8 +19,8 @@ public class SubContainerPic extends SubContainer {
    public void onGuiPacket(int controlID, NBTTagCompound nbt, EntityPlayer player) {
       if (controlID == 0) {
          this.frame.url = nbt.getString("url");
-         this.frame.sizeX = Math.min(nbt.getFloat("x"), 50.0F);
-         this.frame.sizeY = Math.min(nbt.getFloat("y"), 50.0F);
+         this.frame.sizeX = Math.min(nbt.getFloat("x"), OPFrame.maxX);
+         this.frame.sizeY = Math.min(nbt.getFloat("y"), OPFrame.maxY);
          this.frame.renderDistance = nbt.getInteger("render");
          this.frame.posX = nbt.getByte("posX");
          this.frame.posY = nbt.getByte("posY");
