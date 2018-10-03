@@ -58,6 +58,7 @@ public class SubGuiPic extends SubGui {
          } catch (Exception var19) {
             x = 1.0F;
          }
+         x = Math.min(x, OPFrame.maxX); // Babar
 
          float y = 1.0F;
 
@@ -66,6 +67,7 @@ public class SubGuiPic extends SubGui {
          } catch (Exception var18) {
             y = 1.0F;
          }
+         y = Math.min(y, OPFrame.maxY); // Babar
 
          Vector2f size = (Vector2f)DownloadThread.loadedImagesSize.get(this.frame.url);
          if (size != null) {
@@ -105,16 +107,15 @@ public class SubGuiPic extends SubGui {
          } catch (Exception var17) {
             x = 1.0F;
          }
-
-         x = Math.min(x, 50.0F);
+         x = Math.min(x, OPFrame.maxX); // Babar
 
          try {
             y = Float.parseFloat(sizeY.text);
          } catch (Exception var16) {
             y = 1.0F;
          }
-
-         y = Math.min(y, 50.0F);
+         y = Math.min(y, OPFrame.maxY); // Babar
+         
          nbt.setFloat("x", x);
          nbt.setFloat("y", y);
          this.sendPacketToServer(0, nbt);
