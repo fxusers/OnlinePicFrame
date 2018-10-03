@@ -4,6 +4,7 @@ import com.creativemd.creativecore.common.container.SubContainer;
 import com.creativemd.opf.block.TileEntityPicFrame;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTTagCompound;
+import com.creativemd.opf.OPFrame;
 
 public class SubContainerPic extends SubContainer {
    public TileEntityPicFrame frame;

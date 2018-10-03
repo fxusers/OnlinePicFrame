@@ -16,6 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import javax.vecmath.Vector2f;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.nbt.NBTTagCompound;
+import com.creativemd.opf.OPFrame;
 
 @SideOnly(Side.CLIENT)
 public class SubGuiPic extends SubGui {

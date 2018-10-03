@@ -87,7 +87,7 @@ public class BlockPicFrame extends BlockContainer implements IGuiCreator
       } 
       else 
       {
-         TileEntity tileentity = world.getTileEntity(i, j, k);
+         TileEntity tileentity = world.getTileEntity(x, y, z);
          if (tileentity != null) 
          {
             // TODO gamerforEA code start

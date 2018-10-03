@@ -1,5 +1,7 @@
 package com.creativemd.opf;
 
+import java.io.File;
+
 import com.creativemd.opf.block.BlockPicFrame;
 import com.creativemd.opf.block.TileEntityPicFrame;
 import com.creativemd.opf.client.OPFrameClient;
@@ -14,6 +16,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.config.Configuration;
 
 @Mod(
    modid = "opframe",
@@ -48,8 +51,8 @@ public class OPFrame {
       try
       {
          config.load();
-         maxX = config.get("general", "maxX").getInt(maxX);
-         maxY = config.get("general", "maxY").getInt(maxY);
+         maxX = config.get("general", "maxX", 100).getInt(100);
+         maxY = config.get("general", "maxY", 100).getInt(100);
          config.save();
       }
       catch (Throwable throwable)
