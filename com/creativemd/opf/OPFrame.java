@@ -24,6 +24,11 @@ public class OPFrame {
    public static final String modid = "opframe";
    public static final String version = "0.1";
    public static Block frame = (new BlockPicFrame()).setBlockName("opFrame");
+   
+   // Babar ==>
+   public static int maxX = 100; // Размер картины по горизонтали
+   public static int maxY = 100; // Размер картины по вертикали
+   // Babar <==
 
    @SideOnly(Side.CLIENT)
    public void initClient() {
@@ -38,6 +43,25 @@ public class OPFrame {
          this.initClient();
       }
 
-      GameRegistry.addRecipe(new ItemStack(frame), new Object[]{"AXA", "XLX", "AXA", 'X', Blocks.planks, 'L', Items.iron_ingot, 'A', Blocks.wool});
+      // Babar ==>
+      Configuration config = new Configuration(new File("mods/Config/OnlinePicFrame/opf.cfg"));
+      try
+      {
+         config.load();
+         maxX = config.get("general", "maxX").getInt(maxX);
+         maxY = config.get("general", "maxY").getInt(maxY);
+         config.save();
+      }
+      catch (Throwable throwable)
+      {
+         System.err.println("Failed load config opf.cfg. Use default values.");
+         throwable.printStackTrace();
+      }
+      finally
+      {
+         config.save();
+      }      
+      // GameRegistry.addRecipe(new ItemStack(frame), new Object[]{"AXA", "XLX", "AXA", 'X', Blocks.planks, 'L', Items.iron_ingot, 'A', Blocks.wool});
+      // Babar <==
    }
 }
